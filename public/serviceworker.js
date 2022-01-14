@@ -43,3 +43,5 @@ swself.addEventListener("activate", (event) => {
     )
   );
 });
+
+// Dev Tools --> Lighthouse --> Generate Report
