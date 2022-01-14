@@ -25,6 +25,20 @@ const App = () => {
         onChange={(event) => setQuery(event.target.value)}
         onKeyPress={search}
       />
+      {/* checks for weather and returns div after the && if it exists, otherwise nothing */}
+      {weather.main && (
+        <div className="city">
+          <h2 className="city-name">
+            <span>{weather.name}</span>
+            {/* superscript element */}
+            <sup>{weather.sys.country}</sup>
+          </h2>
+          <div className="city-temp">
+            {Math.round(weather.main.temp)}
+            <sup>&deg;C</sup>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
